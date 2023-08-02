@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: red;
+  }
+
+  @font-face {
+    font-family: Baloo;
+    src: url("fonts//BalooBhaina-Regular.ttf") format("opentype");
+  }
+
+  a {
+    color: #000000;
+    text-decoration: none;
+    transition: 0.5s;
+    text-shadow: 0 0 3px rgb(255, 255, 255);
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }Pizzas Tradicionais
+
+  
+  .logo {
+    position: absolute;
+    left: 30px;
+    top: 1px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #ffffff;
+    height: 9vh;;
+    font-size: 23;
+    font-family: Baloo;
+  }
+
+  main {
+    background: url("img/wallpaper.jpg") no-repeat center center;
+    background-size: cover;
+    height: 95vh;
+    filter: brightness(60%);
+  }
+
+  .text1 {
+    font-family: Baloo;
+    color: rgb(255, 255, 255);
+    font-size: 4em;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    top: 500px;
+  }
+
+  .nav-list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    letter-spacing: 2px;
+    margin-left: 32px;
+  }
+
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 999px) {
+    body {
+      overflow-x: hidden;
+    }
+    .nav-list {
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 45vw;
+      height: 92vh;
+      background: #000000;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+    .mobile-menu {
+      display: block;
+    }
+  }
+  
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  
+  @keyframes navLinkFade {
+    from {    top: 500px;
+        left: 650px;
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+  .footer {
+    padding: 100px 0 0;
+    margin-bottom: 30px;
+    background-color: white;
+  }
+
+  .footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: rgb(0, 0, 0);
+  }
+
+  .footer .social a {
+    font-size: 24px;
+    color: inherit;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 8px;
+  }
+
+  .footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .footer ul a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: 0.5s;
+    font-family: Baloo;
+  }
+  .footer ul a:hover {
+    opacity: 0.5;
+  }
+
+  .footer ul li {
+    display: inline-block;
+    padding: 0 15px; 
+  }
+
+  .footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #313131;
+  }
